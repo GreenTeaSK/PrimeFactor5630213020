@@ -1,4 +1,3 @@
-//Surada Khamengkit 5630213020
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,9 +23,15 @@ class PrimeFactorMain {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         PrimeFactor primfactor = new PrimeFactor();
-        
+
+        System.out.println("-1 : Exit");
         System.out.print("Enter number : ");
         int num = sc.nextInt();
-        primfactor.calculate(num);
+        do {
+            primfactor.calculate(num);
+            System.out.println("");
+            System.out.print("Enter number : ");
+            num = sc.nextInt();
+        } while (num != -1);
     }
 }
